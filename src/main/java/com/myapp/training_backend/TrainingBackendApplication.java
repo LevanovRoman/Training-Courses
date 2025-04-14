@@ -22,6 +22,6 @@ public class TrainingBackendApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		excelService.processExcelFile(path);
+//		excelService.processExcelFile(path);
 	}
 }

@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 
 @Entity
 @Table(name = "handbook_department")
-public class HandbookDepartment {
+public class Department {
 
     @Id
     @Column(name = "dept_root_id", nullable = false)

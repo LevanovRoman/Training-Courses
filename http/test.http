@@ -6,9 +6,21 @@ GET https://examples.http-client.intellij.net/get
 GET http://localhost:8080/api/courses/test
 
 ###
+GET http://localhost:8080/api/courses/all-departments
+
+###
+GET http://localhost:8080/api/courses/all-positions
 
 ###
 GET http://localhost:8080/api/courses/courses?
     departmentId=2647&
     positionId=1575
 
+###
+POST http://localhost:8080/api/courses/result
+Content-Type: application/json
+
+{
+  "departmentId": 2647,
+  "positionId": 1626
+}

@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 
 @Entity
 @Table(name = "handbook_position")
-public class HandbookPosition {
+public class Position {
 
     @Id
     @Column(name = "appoint_id", nullable = false)

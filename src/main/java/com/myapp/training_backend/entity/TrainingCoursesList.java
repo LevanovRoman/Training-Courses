@@ -12,11 +12,11 @@ public class TrainingCoursesList {
 
     @ManyToOne
     @JoinColumn(name = "dept_root_id")
-    private HandbookDepartment department;
+    private Department department;
 
     @ManyToOne
     @JoinColumn(name = "appoint_id")
-    private HandbookPosition position;
+    private Position position;
 
     @ManyToOne
     @JoinColumn(name = "training_field_id")
@@ -35,7 +35,7 @@ public class TrainingCoursesList {
     public TrainingCoursesList() {
     }
 
-    public TrainingCoursesList(Long id, HandbookDepartment department, HandbookPosition position, TrainingField course) {
+    public TrainingCoursesList(Long id, Department department, Position position, TrainingField course) {
         this.id = id;
         this.department = department;
         this.position = position;
@@ -46,11 +46,11 @@ public class TrainingCoursesList {
         return id;
     }
 
-    public HandbookDepartment getDepartment() {
+    public Department getDepartment() {
         return department;
     }
 
-    public HandbookPosition getPosition() {
+    public Position getPosition() {
         return position;
     }
 
@@ -62,11 +62,11 @@ public class TrainingCoursesList {
         this.id = id;
     }
 
-    public void setDepartment(HandbookDepartment department) {
+    public void setDepartment(Department department) {
         this.department = department;
     }
 
-    public void setPosition(HandbookPosition position) {
+    public void setPosition(Position position) {
         this.position = position;
     }
 

@@ -1,11 +1,11 @@
 package com.myapp.training_backend.transit;
 
-import com.myapp.training_backend.entity.HandbookDepartment;
-import com.myapp.training_backend.entity.HandbookPosition;
+import com.myapp.training_backend.entity.Department;
+import com.myapp.training_backend.entity.Position;
 import com.myapp.training_backend.entity.TrainingCoursesList;
 import com.myapp.training_backend.entity.TrainingField;
-import com.myapp.training_backend.repository.HandbookDepartmentRepository;
-import com.myapp.training_backend.repository.HandbookPositionRepository;
+import com.myapp.training_backend.repository.DepartmentRepository;
+import com.myapp.training_backend.repository.PositionRepository;
 import com.myapp.training_backend.repository.TrainingCoursesRepository;
 import com.myapp.training_backend.repository.TrainingFieldRepository;
 import org.apache.poi.ss.usermodel.Cell;
@@ -32,11 +32,11 @@ public class ExcelService {
     private static final Logger logger = LoggerFactory.getLogger(ExcelService.class);
 
     private final TrainingFieldRepository trainingFieldRepository;
-    private final HandbookPositionRepository handbookPositionRepository;
+    private final PositionRepository handbookPositionRepository;
     private final TrainingCoursesRepository trainingCoursesRepository;
-    private final HandbookDepartmentRepository handbookDepartmentRepository;
+    private final DepartmentRepository handbookDepartmentRepository;
 
-    public ExcelService(TrainingFieldRepository trainingFieldRepository, HandbookPositionRepository handbookPositionRepository, TrainingCoursesRepository trainingCoursesRepository, HandbookDepartmentRepository handbookDepartmentRepository) {
+    public ExcelService(TrainingFieldRepository trainingFieldRepository, PositionRepository handbookPositionRepository, TrainingCoursesRepository trainingCoursesRepository, DepartmentRepository handbookDepartmentRepository) {
         this.trainingFieldRepository = trainingFieldRepository;
         this.handbookPositionRepository = handbookPositionRepository;
         this.trainingCoursesRepository = trainingCoursesRepository;
@@ -66,8 +66,8 @@ public class ExcelService {
 
             if (currentPosition != null && !courseStr.isEmpty()) {
 //                Optional<HandbookPosition> position = handbookPositionRepository.findByNameIgnoreCase(currentPosition);
-                List<HandbookPosition> positionList = handbookPositionRepository.findAllByNameIgnoreCase(currentPosition);
-                HandbookPosition position = positionList.getFirst();
+                List<Position> positionList = handbookPositionRepository.findAllByNameIgnoreCase(currentPosition);
+                Position position = positionList.getFirst();
 //                System.out.println("PO  " + position.getId());
                 List<TrainingField> courseList = trainingFieldRepository.findAllByCourse(courseStr);
                 TrainingField course = courseList.getFirst();
@@ -76,7 +76,7 @@ public class ExcelService {
 //                System.out.println("COU  " + course.getId());
 
 //                System.out.println(position.getId() + ", " + course.getId());
-                HandbookDepartment department = handbookDepartmentRepository.findById(departmentId)
+                Department department = handbookDepartmentRepository.findById(departmentId)
                         .orElseThrow(RuntimeException::new);
                 Optional<TrainingCoursesList> existing = trainingCoursesRepository
                         .findByDepartmentAndPositionAndCourse(department, position, course);
