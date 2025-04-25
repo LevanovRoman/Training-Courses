@@ -24,3 +24,6 @@ Content-Type: application/json
   "departmentId": 2647,
   "positionId": 1626
 }
+
+###
+GET http://localhost:8181/api/test/today

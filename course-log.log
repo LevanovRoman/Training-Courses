@@ -1,145 +1,443 @@
-2025-04-11T10:47:11.053+03:00  INFO 7408 --- [training-backend] [main] c.m.t.TrainingBackendApplication         : Starting TrainingBackendApplication using Java 21.0.1 with PID 7408 (C:\Users\10390\Desktop\TRY\FullStack\personnel training\training-backend\target\classes started by 10390 in C:\Users\10390\Desktop\TRY\FullStack\personnel training\training-backend)
-2025-04-11T10:47:11.059+03:00  INFO 7408 --- [training-backend] [main] c.m.t.TrainingBackendApplication         : No active profile set, falling back to 1 default profile: "default"
-2025-04-11T10:47:12.006+03:00  INFO 7408 --- [training-backend] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-04-11T10:47:12.194+03:00  INFO 7408 --- [training-backend] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 173 ms. Found 4 JPA repository interfaces.
-2025-04-11T10:47:13.237+03:00  INFO 7408 --- [training-backend] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2025-04-11T10:47:13.253+03:00  INFO 7408 --- [training-backend] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-04-11T10:47:13.253+03:00  INFO 7408 --- [training-backend] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
-2025-04-11T10:47:13.304+03:00  INFO 7408 --- [training-backend] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-04-11T10:47:13.304+03:00  INFO 7408 --- [training-backend] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2166 ms
-2025-04-11T10:47:13.495+03:00  INFO 7408 --- [training-backend] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-04-11T10:47:13.592+03:00  INFO 7408 --- [training-backend] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
-2025-04-11T10:47:13.640+03:00  INFO 7408 --- [training-backend] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-04-11T10:47:14.107+03:00  INFO 7408 --- [training-backend] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-04-11T10:47:14.150+03:00  INFO 7408 --- [training-backend] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-04-11T10:47:14.254+03:00  INFO 7408 --- [training-backend] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@13ef7fa1
-2025-04-11T10:47:14.256+03:00  INFO 7408 --- [training-backend] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-04-11T10:47:14.338+03:00  WARN 7408 --- [training-backend] [main] org.hibernate.dialect.Dialect            : HHH000511: The 11.10.0 version for [org.hibernate.dialect.PostgreSQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 12.0.0. Check the community dialects project for available legacy versions.
-2025-04-11T10:47:15.312+03:00  INFO 7408 --- [training-backend] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-04-11T10:47:15.425+03:00  INFO 7408 --- [training-backend] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-04-11T10:47:15.742+03:00  WARN 7408 --- [training-backend] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-04-11T10:47:16.074+03:00  INFO 7408 --- [training-backend] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2025-04-11T10:47:16.082+03:00  INFO 7408 --- [training-backend] [main] c.m.t.TrainingBackendApplication         : Started TrainingBackendApplication in 5.819 seconds (process running for 6.932)
-2025-04-11T10:47:52.393+03:00  INFO 7408 --- [training-backend] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-04-11T10:47:52.394+03:00  INFO 7408 --- [training-backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-04-11T10:47:52.395+03:00  INFO 7408 --- [training-backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2025-04-11T10:52:13.301+03:00  INFO 7408 --- [training-backend] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-04-11T10:52:13.304+03:00  INFO 7408 --- [training-backend] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-04-11T10:52:13.307+03:00  INFO 7408 --- [training-backend] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2025-04-11T10:52:16.461+03:00  INFO 5708 --- [training-backend] [main] c.m.t.TrainingBackendApplication         : Starting TrainingBackendApplication using Java 21.0.1 with PID 5708 (C:\Users\10390\Desktop\TRY\FullStack\personnel training\training-backend\target\classes started by 10390 in C:\Users\10390\Desktop\TRY\FullStack\personnel training\training-backend)
-2025-04-11T10:52:16.464+03:00  INFO 5708 --- [training-backend] [main] c.m.t.TrainingBackendApplication         : No active profile set, falling back to 1 default profile: "default"
-2025-04-11T10:52:17.211+03:00  INFO 5708 --- [training-backend] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-04-11T10:52:17.283+03:00  INFO 5708 --- [training-backend] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 65 ms. Found 4 JPA repository interfaces.
-2025-04-11T10:52:17.768+03:00  INFO 5708 --- [training-backend] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2025-04-11T10:52:17.782+03:00  INFO 5708 --- [training-backend] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-04-11T10:52:17.783+03:00  INFO 5708 --- [training-backend] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
-2025-04-11T10:52:17.829+03:00  INFO 5708 --- [training-backend] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-04-11T10:52:17.830+03:00  INFO 5708 --- [training-backend] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1317 ms
-2025-04-11T10:52:17.973+03:00  INFO 5708 --- [training-backend] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-04-11T10:52:18.027+03:00  INFO 5708 --- [training-backend] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
-2025-04-11T10:52:18.053+03:00  INFO 5708 --- [training-backend] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-04-11T10:52:18.331+03:00  INFO 5708 --- [training-backend] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-04-11T10:52:18.362+03:00  INFO 5708 --- [training-backend] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-04-11T10:52:18.455+03:00  INFO 5708 --- [training-backend] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@57a667c8
-2025-04-11T10:52:18.457+03:00  INFO 5708 --- [training-backend] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-04-11T10:52:18.504+03:00  WARN 5708 --- [training-backend] [main] org.hibernate.dialect.Dialect            : HHH000511: The 11.10.0 version for [org.hibernate.dialect.PostgreSQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 12.0.0. Check the community dialects project for available legacy versions.
-2025-04-11T10:52:19.271+03:00  INFO 5708 --- [training-backend] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-04-11T10:52:19.508+03:00  INFO 5708 --- [training-backend] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-04-11T10:52:19.797+03:00  WARN 5708 --- [training-backend] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-04-11T10:52:20.129+03:00  INFO 5708 --- [training-backend] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2025-04-11T10:52:20.139+03:00  INFO 5708 --- [training-backend] [main] c.m.t.TrainingBackendApplication         : Started TrainingBackendApplication in 4.203 seconds (process running for 4.977)
-2025-04-11T10:53:17.174+03:00  INFO 5708 --- [training-backend] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-04-11T10:53:17.178+03:00  INFO 5708 --- [training-backend] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-04-11T10:53:17.183+03:00  INFO 5708 --- [training-backend] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2025-04-11T10:53:20.641+03:00  INFO 7192 --- [training-backend] [main] c.m.t.TrainingBackendApplication         : Starting TrainingBackendApplication using Java 21.0.1 with PID 7192 (C:\Users\10390\Desktop\TRY\FullStack\personnel training\training-backend\target\classes started by 10390 in C:\Users\10390\Desktop\TRY\FullStack\personnel training\training-backend)
-2025-04-11T10:53:20.644+03:00  INFO 7192 --- [training-backend] [main] c.m.t.TrainingBackendApplication         : No active profile set, falling back to 1 default profile: "default"
-2025-04-11T10:53:21.379+03:00  INFO 7192 --- [training-backend] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-04-11T10:53:21.449+03:00  INFO 7192 --- [training-backend] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 62 ms. Found 4 JPA repository interfaces.
-2025-04-11T10:53:21.918+03:00  INFO 7192 --- [training-backend] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2025-04-11T10:53:21.931+03:00  INFO 7192 --- [training-backend] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-04-11T10:53:21.931+03:00  INFO 7192 --- [training-backend] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
-2025-04-11T10:53:21.981+03:00  INFO 7192 --- [training-backend] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-04-11T10:53:21.982+03:00  INFO 7192 --- [training-backend] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1289 ms
-2025-04-11T10:53:22.145+03:00  INFO 7192 --- [training-backend] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-04-11T10:53:22.198+03:00  INFO 7192 --- [training-backend] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
-2025-04-11T10:53:22.224+03:00  INFO 7192 --- [training-backend] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-04-11T10:53:22.479+03:00  INFO 7192 --- [training-backend] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-04-11T10:53:22.504+03:00  INFO 7192 --- [training-backend] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-04-11T10:53:22.595+03:00  INFO 7192 --- [training-backend] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@13ef7fa1
-2025-04-11T10:53:22.597+03:00  INFO 7192 --- [training-backend] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-04-11T10:53:22.640+03:00  WARN 7192 --- [training-backend] [main] org.hibernate.dialect.Dialect            : HHH000511: The 11.10.0 version for [org.hibernate.dialect.PostgreSQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 12.0.0. Check the community dialects project for available legacy versions.
-2025-04-11T10:53:23.416+03:00  INFO 7192 --- [training-backend] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-04-11T10:53:23.664+03:00  INFO 7192 --- [training-backend] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-04-11T10:53:23.936+03:00  WARN 7192 --- [training-backend] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-04-11T10:53:24.248+03:00  INFO 7192 --- [training-backend] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2025-04-11T10:53:24.256+03:00  INFO 7192 --- [training-backend] [main] c.m.t.TrainingBackendApplication         : Started TrainingBackendApplication in 4.139 seconds (process running for 4.886)
-2025-04-11T10:53:27.318+03:00  INFO 7192 --- [training-backend] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-04-11T10:53:27.318+03:00  INFO 7192 --- [training-backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-04-11T10:53:27.319+03:00  INFO 7192 --- [training-backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2025-04-11T14:11:05.097+03:00  INFO 7192 --- [training-backend] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-04-11T14:11:05.102+03:00  INFO 7192 --- [training-backend] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-04-11T14:11:05.110+03:00  INFO 7192 --- [training-backend] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2025-04-11T14:11:12.034+03:00  INFO 10536 --- [training-backend] [main] c.m.t.TrainingBackendApplication         : Starting TrainingBackendApplication using Java 21.0.1 with PID 10536 (C:\Users\10390\Desktop\TRY\FullStack\personnel training\training-backend\target\classes started by 10390 in C:\Users\10390\Desktop\TRY\FullStack\personnel training\training-backend)
-2025-04-11T14:11:12.037+03:00  INFO 10536 --- [training-backend] [main] c.m.t.TrainingBackendApplication         : No active profile set, falling back to 1 default profile: "default"
-2025-04-11T14:11:12.900+03:00  INFO 10536 --- [training-backend] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-04-11T14:11:12.997+03:00  INFO 10536 --- [training-backend] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 86 ms. Found 4 JPA repository interfaces.
-2025-04-11T14:11:13.632+03:00  INFO 10536 --- [training-backend] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2025-04-11T14:11:13.648+03:00  INFO 10536 --- [training-backend] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-04-11T14:11:13.648+03:00  INFO 10536 --- [training-backend] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
-2025-04-11T14:11:13.705+03:00  INFO 10536 --- [training-backend] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-04-11T14:11:13.706+03:00  INFO 10536 --- [training-backend] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1621 ms
-2025-04-11T14:11:13.910+03:00  INFO 10536 --- [training-backend] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-04-11T14:11:13.997+03:00  INFO 10536 --- [training-backend] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
-2025-04-11T14:11:14.052+03:00  INFO 10536 --- [training-backend] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-04-11T14:11:14.484+03:00  INFO 10536 --- [training-backend] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-04-11T14:11:14.529+03:00  INFO 10536 --- [training-backend] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-04-11T14:11:14.629+03:00  INFO 10536 --- [training-backend] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@b8a144e
-2025-04-11T14:11:14.631+03:00  INFO 10536 --- [training-backend] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-04-11T14:11:14.696+03:00  WARN 10536 --- [training-backend] [main] org.hibernate.dialect.Dialect            : HHH000511: The 11.10.0 version for [org.hibernate.dialect.PostgreSQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 12.0.0. Check the community dialects project for available legacy versions.
-2025-04-11T14:11:15.800+03:00  INFO 10536 --- [training-backend] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-04-11T14:11:16.037+03:00  INFO 10536 --- [training-backend] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-04-11T14:11:16.325+03:00  WARN 10536 --- [training-backend] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-04-11T14:11:16.630+03:00  INFO 10536 --- [training-backend] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2025-04-11T14:11:16.636+03:00  INFO 10536 --- [training-backend] [main] c.m.t.TrainingBackendApplication         : Started TrainingBackendApplication in 5.212 seconds (process running for 6.29)
-2025-04-11T14:11:46.513+03:00  INFO 10536 --- [training-backend] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-04-11T14:11:46.514+03:00  INFO 10536 --- [training-backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-04-11T14:11:46.516+03:00  INFO 10536 --- [training-backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2025-04-11T14:43:38.941+03:00  WARN 10536 --- [training-backend] [http-nio-8080-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.context.request.async.AsyncRequestNotUsableException: ServletOutputStream failed to write: java.io.IOException: Программа на вашем хост-компьютере разорвала установленное подключение]
-2025-04-11T14:54:39.162+03:00  WARN 10536 --- [training-backend] [http-nio-8080-exec-10] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.context.request.async.AsyncRequestNotUsableException: ServletOutputStream failed to write: java.io.IOException: Программа на вашем хост-компьютере разорвала установленное подключение]
-2025-04-11T14:55:13.414+03:00  WARN 10536 --- [training-backend] [http-nio-8080-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.context.request.async.AsyncRequestNotUsableException: ServletOutputStream failed to write: java.io.IOException: Программа на вашем хост-компьютере разорвала установленное подключение]
-2025-04-11T15:20:39.472+03:00  INFO 10536 --- [training-backend] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-04-11T15:20:39.480+03:00  INFO 10536 --- [training-backend] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-04-11T15:20:39.484+03:00  INFO 10536 --- [training-backend] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2025-04-11T15:20:44.569+03:00  INFO 15048 --- [training-backend] [main] c.m.t.TrainingBackendApplication         : Starting TrainingBackendApplication using Java 21.0.1 with PID 15048 (C:\Users\10390\Desktop\TRY\FullStack\personnel training\training-backend\target\classes started by 10390 in C:\Users\10390\Desktop\TRY\FullStack\personnel training\training-backend)
-2025-04-11T15:20:44.571+03:00  INFO 15048 --- [training-backend] [main] c.m.t.TrainingBackendApplication         : No active profile set, falling back to 1 default profile: "default"
-2025-04-11T15:20:45.337+03:00  INFO 15048 --- [training-backend] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-04-11T15:20:45.413+03:00  INFO 15048 --- [training-backend] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 67 ms. Found 4 JPA repository interfaces.
-2025-04-11T15:20:45.911+03:00  INFO 15048 --- [training-backend] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2025-04-11T15:20:45.924+03:00  INFO 15048 --- [training-backend] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-04-11T15:20:45.925+03:00  INFO 15048 --- [training-backend] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
-2025-04-11T15:20:45.974+03:00  INFO 15048 --- [training-backend] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-04-11T15:20:45.974+03:00  INFO 15048 --- [training-backend] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1352 ms
-2025-04-11T15:20:46.116+03:00  INFO 15048 --- [training-backend] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-04-11T15:20:46.165+03:00  INFO 15048 --- [training-backend] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
-2025-04-11T15:20:46.195+03:00  INFO 15048 --- [training-backend] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-04-11T15:20:46.478+03:00  INFO 15048 --- [training-backend] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-04-11T15:20:46.504+03:00  INFO 15048 --- [training-backend] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-04-11T15:20:46.589+03:00  INFO 15048 --- [training-backend] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@3212d853
-2025-04-11T15:20:46.591+03:00  INFO 15048 --- [training-backend] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-04-11T15:20:46.638+03:00  WARN 15048 --- [training-backend] [main] org.hibernate.dialect.Dialect            : HHH000511: The 11.10.0 version for [org.hibernate.dialect.PostgreSQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 12.0.0. Check the community dialects project for available legacy versions.
-2025-04-11T15:20:47.416+03:00  INFO 15048 --- [training-backend] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-04-11T15:20:47.662+03:00  INFO 15048 --- [training-backend] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-04-11T15:20:47.943+03:00  WARN 15048 --- [training-backend] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-04-11T15:20:48.263+03:00  INFO 15048 --- [training-backend] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2025-04-11T15:20:48.271+03:00  INFO 15048 --- [training-backend] [main] c.m.t.TrainingBackendApplication         : Started TrainingBackendApplication in 4.225 seconds (process running for 5.001)
-2025-04-11T15:20:56.006+03:00  INFO 15048 --- [training-backend] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-04-11T15:20:56.007+03:00  INFO 15048 --- [training-backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-04-11T15:20:56.009+03:00  INFO 15048 --- [training-backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2025-04-11T15:21:30.332+03:00  WARN 15048 --- [training-backend] [http-nio-8080-exec-5] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `int` from String "047 корпусосборочный цех": not a valid `int` value]
-2025-04-11T15:21:32.624+03:00  WARN 15048 --- [training-backend] [http-nio-8080-exec-6] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `int` from String "047 корпусосборочный цех": not a valid `int` value]
-2025-04-11T15:24:03.271+03:00  WARN 15048 --- [training-backend] [http-nio-8080-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `int` from String "408 отдел технического контроля": not a valid `int` value]
-2025-04-11T15:26:11.495+03:00  WARN 15048 --- [training-backend] [http-nio-8080-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `int` from String "408 отдел технического контроля": not a valid `int` value]
-2025-04-11T15:28:25.872+03:00  WARN 15048 --- [training-backend] [http-nio-8080-exec-9] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `int` from String "408 отдел технического контроля": not a valid `int` value]
-2025-04-11T17:01:34.875+03:00  INFO 15048 --- [training-backend] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-04-11T17:01:34.880+03:00  INFO 15048 --- [training-backend] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-04-11T17:01:34.884+03:00  INFO 15048 --- [training-backend] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-04-21T09:02:27.391+03:00  INFO 11336 --- [training-backend] [main] c.m.t.TrainingBackendApplication         : Starting TrainingBackendApplication using Java 21.0.1 with PID 11336 (C:\Users\10390\Desktop\TRY\FullStack\personnel training\training-backend\target\classes started by 10390 in C:\Users\10390\Desktop\TRY\FullStack\personnel training\training-backend)
+2025-04-21T09:02:27.400+03:00  INFO 11336 --- [training-backend] [main] c.m.t.TrainingBackendApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-04-21T09:02:28.547+03:00  INFO 11336 --- [training-backend] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-21T09:02:28.719+03:00  INFO 11336 --- [training-backend] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 157 ms. Found 5 JPA repository interfaces.
+2025-04-21T09:02:29.579+03:00  INFO 11336 --- [training-backend] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8181 (http)
+2025-04-21T09:02:29.602+03:00  INFO 11336 --- [training-backend] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-21T09:02:29.602+03:00  INFO 11336 --- [training-backend] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-04-21T09:02:29.668+03:00  INFO 11336 --- [training-backend] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-21T09:02:29.668+03:00  INFO 11336 --- [training-backend] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2162 ms
+2025-04-21T09:02:29.886+03:00  INFO 11336 --- [training-backend] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-21T09:02:29.992+03:00  INFO 11336 --- [training-backend] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2025-04-21T09:02:30.055+03:00  INFO 11336 --- [training-backend] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-04-21T09:02:30.606+03:00  INFO 11336 --- [training-backend] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-21T09:02:30.662+03:00  INFO 11336 --- [training-backend] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-04-21T09:02:31.745+03:00  WARN 11336 --- [training-backend] [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 3D000
+2025-04-21T09:02:31.746+03:00 ERROR 11336 --- [training-backend] [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : FATAL: database "sv_corporate_site_db_test" does not exist
+2025-04-21T09:02:31.747+03:00  WARN 11336 --- [training-backend] [main] o.h.e.j.e.i.JdbcEnvironmentInitiator     : HHH000342: Could not obtain connection to query metadata
+
+org.hibernate.exception.GenericJDBCException: unable to obtain isolated JDBC connection [FATAL: database "sv_corporate_site_db_test" does not exist] [n/a]
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:63) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:94) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:116) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:292) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:124) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:78) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:130) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:221) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:189) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:171) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1431) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1502) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75) ~[spring-orm-6.1.18.jar:6.1.18]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390) ~[spring-orm-6.1.18.jar:6.1.18]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-6.1.18.jar:6.1.18]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-6.1.18.jar:6.1.18]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366) ~[spring-orm-6.1.18.jar:6.1.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1853) ~[spring-beans-6.1.18.jar:6.1.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1802) ~[spring-beans-6.1.18.jar:6.1.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600) ~[spring-beans-6.1.18.jar:6.1.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.18.jar:6.1.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337) ~[spring-beans-6.1.18.jar:6.1.18]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.18.jar:6.1.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335) ~[spring-beans-6.1.18.jar:6.1.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205) ~[spring-beans-6.1.18.jar:6.1.18]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:954) ~[spring-context-6.1.18.jar:6.1.18]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625) ~[spring-context-6.1.18.jar:6.1.18]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.3.10.jar:3.3.10]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.3.10.jar:3.3.10]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.3.10.jar:3.3.10]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335) ~[spring-boot-3.3.10.jar:3.3.10]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) ~[spring-boot-3.3.10.jar:3.3.10]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) ~[spring-boot-3.3.10.jar:3.3.10]
+	at com.myapp.training_backend.TrainingBackendApplication.main(TrainingBackendApplication.java:23) ~[classes/:na]
+Caused by: org.postgresql.util.PSQLException: FATAL: database "sv_corporate_site_db_test" does not exist
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2733) ~[postgresql-42.7.5.jar:42.7.5]
+	at org.postgresql.core.v3.QueryExecutorImpl.readStartupMessages(QueryExecutorImpl.java:2845) ~[postgresql-42.7.5.jar:42.7.5]
+	at org.postgresql.core.v3.QueryExecutorImpl.<init>(QueryExecutorImpl.java:176) ~[postgresql-42.7.5.jar:42.7.5]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:323) ~[postgresql-42.7.5.jar:42.7.5]
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:54) ~[postgresql-42.7.5.jar:42.7.5]
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:273) ~[postgresql-42.7.5.jar:42.7.5]
+	at org.postgresql.Driver.makeConnection(Driver.java:446) ~[postgresql-42.7.5.jar:42.7.5]
+	at org.postgresql.Driver.connect(Driver.java:298) ~[postgresql-42.7.5.jar:42.7.5]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:137) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:360) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:202) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:461) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:550) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:98) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111) ~[HikariCP-5.1.0.jar:na]
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:439) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:61) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	... 35 common frames omitted
+
+2025-04-21T09:02:31.752+03:00 ERROR 11336 --- [training-backend] [main] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+2025-04-21T09:02:31.753+03:00  WARN 11336 --- [training-backend] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+2025-04-21T09:02:31.756+03:00  INFO 11336 --- [training-backend] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-04-21T09:02:31.775+03:00  INFO 11336 --- [training-backend] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-04-21T09:02:31.796+03:00 ERROR 11336 --- [training-backend] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1806) ~[spring-beans-6.1.18.jar:6.1.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600) ~[spring-beans-6.1.18.jar:6.1.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.18.jar:6.1.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337) ~[spring-beans-6.1.18.jar:6.1.18]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.18.jar:6.1.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335) ~[spring-beans-6.1.18.jar:6.1.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205) ~[spring-beans-6.1.18.jar:6.1.18]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:954) ~[spring-context-6.1.18.jar:6.1.18]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625) ~[spring-context-6.1.18.jar:6.1.18]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.3.10.jar:3.3.10]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.3.10.jar:3.3.10]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.3.10.jar:3.3.10]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335) ~[spring-boot-3.3.10.jar:3.3.10]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) ~[spring-boot-3.3.10.jar:3.3.10]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) ~[spring-boot-3.3.10.jar:3.3.10]
+	at com.myapp.training_backend.TrainingBackendApplication.main(TrainingBackendApplication.java:23) ~[classes/:na]
+Caused by: org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:276) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:221) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:189) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:171) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1431) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1502) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75) ~[spring-orm-6.1.18.jar:6.1.18]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390) ~[spring-orm-6.1.18.jar:6.1.18]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-6.1.18.jar:6.1.18]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-6.1.18.jar:6.1.18]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366) ~[spring-orm-6.1.18.jar:6.1.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1853) ~[spring-beans-6.1.18.jar:6.1.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1802) ~[spring-beans-6.1.18.jar:6.1.18]
+	... 15 common frames omitted
+Caused by: org.hibernate.HibernateException: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.determineDialect(DialectFactoryImpl.java:191) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.buildDialect(DialectFactoryImpl.java:87) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentWithDefaults(JdbcEnvironmentInitiator.java:153) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:364) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:124) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:78) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:130) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263) ~[hibernate-core-6.5.3.Final.jar:6.5.3.Final]
+	... 30 common frames omitted
+
+2025-04-21T09:24:22.479+03:00  INFO 7640 --- [training-backend] [main] c.m.t.TrainingBackendApplication         : Starting TrainingBackendApplication using Java 21.0.1 with PID 7640 (C:\Users\10390\Desktop\TRY\FullStack\personnel training\training-backend\target\classes started by 10390 in C:\Users\10390\Desktop\TRY\FullStack\personnel training\training-backend)
+2025-04-21T09:24:22.485+03:00  INFO 7640 --- [training-backend] [main] c.m.t.TrainingBackendApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-04-21T09:24:23.783+03:00  INFO 7640 --- [training-backend] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-21T09:24:23.926+03:00  INFO 7640 --- [training-backend] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 127 ms. Found 5 JPA repository interfaces.
+2025-04-21T09:24:24.972+03:00  INFO 7640 --- [training-backend] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8181 (http)
+2025-04-21T09:24:24.994+03:00  INFO 7640 --- [training-backend] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-21T09:24:24.994+03:00  INFO 7640 --- [training-backend] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-04-21T09:24:25.098+03:00  INFO 7640 --- [training-backend] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-21T09:24:25.099+03:00  INFO 7640 --- [training-backend] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2459 ms
+2025-04-21T09:24:25.386+03:00  INFO 7640 --- [training-backend] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-21T09:24:25.496+03:00  INFO 7640 --- [training-backend] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2025-04-21T09:24:25.551+03:00  INFO 7640 --- [training-backend] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-04-21T09:24:26.116+03:00  INFO 7640 --- [training-backend] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-21T09:24:26.167+03:00  INFO 7640 --- [training-backend] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-04-21T09:24:26.273+03:00  INFO 7640 --- [training-backend] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1b475663
+2025-04-21T09:24:26.275+03:00  INFO 7640 --- [training-backend] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-04-21T09:24:26.355+03:00  WARN 7640 --- [training-backend] [main] org.hibernate.dialect.Dialect            : HHH000511: The 11.10.0 version for [org.hibernate.dialect.PostgreSQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 12.0.0. Check the community dialects project for available legacy versions.
+2025-04-21T09:24:27.511+03:00  INFO 7640 --- [training-backend] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-21T09:24:29.203+03:00  INFO 7640 --- [training-backend] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-21T09:24:29.849+03:00  INFO 7640 --- [training-backend] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-04-21T09:24:29.885+03:00  WARN 7640 --- [training-backend] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-21T09:24:30.451+03:00  INFO 7640 --- [training-backend] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8181 (http) with context path '/'
+2025-04-21T09:24:30.464+03:00  INFO 7640 --- [training-backend] [main] c.m.t.TrainingBackendApplication         : Started TrainingBackendApplication in 8.876 seconds (process running for 10.651)
+2025-04-21T09:26:20.516+03:00  INFO 7640 --- [training-backend] [http-nio-8181-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-21T09:26:20.516+03:00  INFO 7640 --- [training-backend] [http-nio-8181-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-04-21T09:26:20.518+03:00  INFO 7640 --- [training-backend] [http-nio-8181-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-04-21T09:50:24.705+03:00  INFO 7640 --- [training-backend] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-04-21T09:50:24.714+03:00  INFO 7640 --- [training-backend] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-04-21T09:50:24.717+03:00  INFO 7640 --- [training-backend] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-04-21T09:50:31.021+03:00  INFO 2552 --- [training-backend] [main] c.m.t.TrainingBackendApplication         : Starting TrainingBackendApplication using Java 21.0.1 with PID 2552 (C:\Users\10390\Desktop\TRY\FullStack\personnel training\training-backend\target\classes started by 10390 in C:\Users\10390\Desktop\TRY\FullStack\personnel training\training-backend)
+2025-04-21T09:50:31.024+03:00  INFO 2552 --- [training-backend] [main] c.m.t.TrainingBackendApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-04-21T09:50:31.957+03:00  INFO 2552 --- [training-backend] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-21T09:50:32.052+03:00  INFO 2552 --- [training-backend] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 86 ms. Found 5 JPA repository interfaces.
+2025-04-21T09:50:32.939+03:00  INFO 2552 --- [training-backend] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8181 (http)
+2025-04-21T09:50:32.962+03:00  INFO 2552 --- [training-backend] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-21T09:50:32.962+03:00  INFO 2552 --- [training-backend] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-04-21T09:50:33.039+03:00  INFO 2552 --- [training-backend] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-21T09:50:33.040+03:00  INFO 2552 --- [training-backend] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1964 ms
+2025-04-21T09:50:33.326+03:00  INFO 2552 --- [training-backend] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-21T09:50:33.379+03:00  INFO 2552 --- [training-backend] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2025-04-21T09:50:33.410+03:00  INFO 2552 --- [training-backend] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-04-21T09:50:33.809+03:00  INFO 2552 --- [training-backend] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-21T09:50:33.843+03:00  INFO 2552 --- [training-backend] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-04-21T09:50:33.969+03:00  INFO 2552 --- [training-backend] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@720a1fd0
+2025-04-21T09:50:33.971+03:00  INFO 2552 --- [training-backend] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-04-21T09:50:34.024+03:00  WARN 2552 --- [training-backend] [main] org.hibernate.dialect.Dialect            : HHH000511: The 11.10.0 version for [org.hibernate.dialect.PostgreSQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 12.0.0. Check the community dialects project for available legacy versions.
+2025-04-21T09:50:35.044+03:00  INFO 2552 --- [training-backend] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-21T09:50:35.316+03:00  INFO 2552 --- [training-backend] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-21T09:50:35.658+03:00  INFO 2552 --- [training-backend] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-04-21T09:50:35.680+03:00  WARN 2552 --- [training-backend] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-21T09:50:36.108+03:00  INFO 2552 --- [training-backend] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8181 (http) with context path '/'
+2025-04-21T09:50:36.116+03:00  INFO 2552 --- [training-backend] [main] c.m.t.TrainingBackendApplication         : Started TrainingBackendApplication in 5.783 seconds (process running for 6.839)
+2025-04-21T09:50:56.987+03:00  INFO 2552 --- [training-backend] [http-nio-8181-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-21T09:50:56.988+03:00  INFO 2552 --- [training-backend] [http-nio-8181-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-04-21T09:50:56.990+03:00  INFO 2552 --- [training-backend] [http-nio-8181-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-04-21T11:39:21.227+03:00  INFO 2552 --- [training-backend] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-04-21T11:39:21.384+03:00  INFO 2552 --- [training-backend] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-04-21T11:39:21.393+03:00  INFO 2552 --- [training-backend] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-04-21T14:37:21.076+03:00  INFO 4700 --- [training-backend] [main] c.m.t.TrainingBackendApplication         : Starting TrainingBackendApplication using Java 21.0.1 with PID 4700 (C:\Users\10390\Desktop\TRY\FullStack\personnel training\training-backend\target\classes started by 10390 in C:\Users\10390\Desktop\TRY\FullStack\personnel training\training-backend)
+2025-04-21T14:37:21.080+03:00  INFO 4700 --- [training-backend] [main] c.m.t.TrainingBackendApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-04-21T14:37:22.197+03:00  INFO 4700 --- [training-backend] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-21T14:37:22.301+03:00  INFO 4700 --- [training-backend] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 93 ms. Found 5 JPA repository interfaces.
+2025-04-21T14:37:23.008+03:00  INFO 4700 --- [training-backend] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8181 (http)
+2025-04-21T14:37:23.024+03:00  INFO 4700 --- [training-backend] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-21T14:37:23.024+03:00  INFO 4700 --- [training-backend] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-04-21T14:37:23.078+03:00  INFO 4700 --- [training-backend] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-21T14:37:23.079+03:00  INFO 4700 --- [training-backend] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1885 ms
+2025-04-21T14:37:23.281+03:00  INFO 4700 --- [training-backend] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-21T14:37:23.394+03:00  INFO 4700 --- [training-backend] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2025-04-21T14:37:23.457+03:00  INFO 4700 --- [training-backend] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-04-21T14:37:23.955+03:00  INFO 4700 --- [training-backend] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-21T14:37:24.010+03:00  INFO 4700 --- [training-backend] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-04-21T14:37:24.120+03:00  INFO 4700 --- [training-backend] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@67763ebe
+2025-04-21T14:37:24.122+03:00  INFO 4700 --- [training-backend] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-04-21T14:37:24.218+03:00  WARN 4700 --- [training-backend] [main] org.hibernate.dialect.Dialect            : HHH000511: The 11.10.0 version for [org.hibernate.dialect.PostgreSQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 12.0.0. Check the community dialects project for available legacy versions.
+2025-04-21T14:37:25.318+03:00  INFO 4700 --- [training-backend] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-21T14:37:25.589+03:00  INFO 4700 --- [training-backend] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-21T14:37:25.939+03:00  INFO 4700 --- [training-backend] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-04-21T14:37:25.964+03:00  WARN 4700 --- [training-backend] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-21T14:37:26.311+03:00  INFO 4700 --- [training-backend] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8181 (http) with context path '/'
+2025-04-21T14:37:26.317+03:00  INFO 4700 --- [training-backend] [main] c.m.t.TrainingBackendApplication         : Started TrainingBackendApplication in 5.943 seconds (process running for 7.552)
+2025-04-21T14:43:20.927+03:00  INFO 4700 --- [training-backend] [http-nio-8181-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-21T14:43:20.928+03:00  INFO 4700 --- [training-backend] [http-nio-8181-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-04-21T14:43:20.929+03:00  INFO 4700 --- [training-backend] [http-nio-8181-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-04-21T14:45:09.292+03:00  INFO 4700 --- [training-backend] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-04-21T14:45:09.295+03:00  INFO 4700 --- [training-backend] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-04-21T14:45:09.299+03:00  INFO 4700 --- [training-backend] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-04-21T14:45:16.469+03:00  INFO 16488 --- [training-backend] [main] c.m.t.TrainingBackendApplication         : Starting TrainingBackendApplication using Java 21.0.1 with PID 16488 (C:\Users\10390\Desktop\TRY\FullStack\personnel training\training-backend\target\classes started by 10390 in C:\Users\10390\Desktop\TRY\FullStack\personnel training\training-backend)
+2025-04-21T14:45:16.473+03:00  INFO 16488 --- [training-backend] [main] c.m.t.TrainingBackendApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-04-21T14:45:17.396+03:00  INFO 16488 --- [training-backend] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-21T14:45:17.517+03:00  INFO 16488 --- [training-backend] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 109 ms. Found 5 JPA repository interfaces.
+2025-04-21T14:45:18.445+03:00  INFO 16488 --- [training-backend] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8181 (http)
+2025-04-21T14:45:18.472+03:00  INFO 16488 --- [training-backend] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-21T14:45:18.472+03:00  INFO 16488 --- [training-backend] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-04-21T14:45:18.563+03:00  INFO 16488 --- [training-backend] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-21T14:45:18.564+03:00  INFO 16488 --- [training-backend] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2030 ms
+2025-04-21T14:45:18.852+03:00  INFO 16488 --- [training-backend] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-21T14:45:19.664+03:00  INFO 16488 --- [training-backend] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2025-04-21T14:45:19.740+03:00  INFO 16488 --- [training-backend] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-04-21T14:45:20.410+03:00  INFO 16488 --- [training-backend] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-21T14:45:20.484+03:00  INFO 16488 --- [training-backend] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-04-21T14:45:20.602+03:00  INFO 16488 --- [training-backend] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6d7b2319
+2025-04-21T14:45:20.604+03:00  INFO 16488 --- [training-backend] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-04-21T14:45:20.693+03:00  WARN 16488 --- [training-backend] [main] org.hibernate.dialect.Dialect            : HHH000511: The 11.10.0 version for [org.hibernate.dialect.PostgreSQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 12.0.0. Check the community dialects project for available legacy versions.
+2025-04-21T14:45:22.048+03:00  INFO 16488 --- [training-backend] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-21T14:45:22.294+03:00  INFO 16488 --- [training-backend] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-21T14:45:22.596+03:00  INFO 16488 --- [training-backend] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-04-21T14:45:22.618+03:00  WARN 16488 --- [training-backend] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-21T14:45:22.951+03:00  INFO 16488 --- [training-backend] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8181 (http) with context path '/'
+2025-04-21T14:45:22.957+03:00  INFO 16488 --- [training-backend] [main] c.m.t.TrainingBackendApplication         : Started TrainingBackendApplication in 8.506 seconds (process running for 9.519)
+2025-04-21T14:46:32.962+03:00  INFO 16488 --- [training-backend] [http-nio-8181-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-21T14:46:32.962+03:00  INFO 16488 --- [training-backend] [http-nio-8181-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-04-21T14:46:32.963+03:00  INFO 16488 --- [training-backend] [http-nio-8181-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-04-21T14:46:33.121+03:00  INFO 16488 --- [training-backend] [http-nio-8181-exec-2] c.m.t.c.TrainingCoursesController        : The object was received admin2 admin
+2025-04-21T14:46:33.141+03:00  INFO 16488 --- [training-backend] [http-nio-8181-exec-2] c.m.t.service.OneSServiceImpl            : Sending request to http://172.16.2.222/UchWork/hs/PurchaseDocument/PostFiles
+2025-04-21T14:46:33.255+03:00 ERROR 16488 --- [training-backend] [http-nio-8181-exec-2] c.m.t.service.OneSServiceImpl            : Error : org.springframework.web.client.HttpClientErrorException$NotFound: 404 Not found: [no body]
+2025-04-21T14:46:33.255+03:00  INFO 16488 --- [training-backend] [http-nio-8181-exec-2] c.m.t.c.TrainingCoursesController        : Error when sending
+2025-04-21T14:50:47.109+03:00  INFO 16488 --- [training-backend] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-04-21T14:50:47.114+03:00  INFO 16488 --- [training-backend] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-04-21T14:50:47.118+03:00  INFO 16488 --- [training-backend] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-04-21T14:50:52.679+03:00  INFO 15568 --- [training-backend] [main] c.m.t.TrainingBackendApplication         : Starting TrainingBackendApplication using Java 21.0.1 with PID 15568 (C:\Users\10390\Desktop\TRY\FullStack\personnel training\training-backend\target\classes started by 10390 in C:\Users\10390\Desktop\TRY\FullStack\personnel training\training-backend)
+2025-04-21T14:50:52.681+03:00  INFO 15568 --- [training-backend] [main] c.m.t.TrainingBackendApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-04-21T14:50:53.473+03:00  INFO 15568 --- [training-backend] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-21T14:50:53.561+03:00  INFO 15568 --- [training-backend] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 80 ms. Found 5 JPA repository interfaces.
+2025-04-21T14:50:54.049+03:00  INFO 15568 --- [training-backend] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8181 (http)
+2025-04-21T14:50:54.063+03:00  INFO 15568 --- [training-backend] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-21T14:50:54.064+03:00  INFO 15568 --- [training-backend] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-04-21T14:50:54.118+03:00  INFO 15568 --- [training-backend] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-21T14:50:54.118+03:00  INFO 15568 --- [training-backend] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1386 ms
+2025-04-21T14:50:54.324+03:00  INFO 15568 --- [training-backend] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-21T14:50:54.444+03:00  INFO 15568 --- [training-backend] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2025-04-21T14:50:54.509+03:00  INFO 15568 --- [training-backend] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-04-21T14:50:54.932+03:00  INFO 15568 --- [training-backend] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-21T14:50:54.983+03:00  INFO 15568 --- [training-backend] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-04-21T14:50:55.126+03:00  INFO 15568 --- [training-backend] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@56c0a61e
+2025-04-21T14:50:55.131+03:00  INFO 15568 --- [training-backend] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-04-21T14:50:55.233+03:00  WARN 15568 --- [training-backend] [main] org.hibernate.dialect.Dialect            : HHH000511: The 11.10.0 version for [org.hibernate.dialect.PostgreSQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 12.0.0. Check the community dialects project for available legacy versions.
+2025-04-21T14:50:56.328+03:00  INFO 15568 --- [training-backend] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-21T14:50:56.565+03:00  INFO 15568 --- [training-backend] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-21T14:50:56.875+03:00  INFO 15568 --- [training-backend] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-04-21T14:50:56.897+03:00  WARN 15568 --- [training-backend] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-21T14:50:57.251+03:00  INFO 15568 --- [training-backend] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8181 (http) with context path '/'
+2025-04-21T14:50:57.257+03:00  INFO 15568 --- [training-backend] [main] c.m.t.TrainingBackendApplication         : Started TrainingBackendApplication in 5.184 seconds (process running for 6.329)
+2025-04-21T14:51:12.608+03:00  INFO 15568 --- [training-backend] [http-nio-8181-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-21T14:51:12.608+03:00  INFO 15568 --- [training-backend] [http-nio-8181-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-04-21T14:51:12.609+03:00  INFO 15568 --- [training-backend] [http-nio-8181-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2025-04-21T14:51:12.714+03:00  INFO 15568 --- [training-backend] [http-nio-8181-exec-1] c.m.t.c.TrainingCoursesController        : The object was received admin2 admin
+2025-04-21T14:51:12.725+03:00  INFO 15568 --- [training-backend] [http-nio-8181-exec-1] c.m.t.service.OneSServiceImpl            : Sending request to http://172.16.2.222/UchWork/hs/PurchaseDocument/PostFiles
+2025-04-21T14:51:12.809+03:00 ERROR 15568 --- [training-backend] [http-nio-8181-exec-1] c.m.t.service.OneSServiceImpl            : Error : org.springframework.web.client.HttpClientErrorException$NotFound: 404 Not found: [no body]
+2025-04-21T14:51:12.809+03:00  INFO 15568 --- [training-backend] [http-nio-8181-exec-1] c.m.t.c.TrainingCoursesController        : Error when sending
+2025-04-21T14:52:37.146+03:00  INFO 15568 --- [training-backend] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-04-21T14:52:37.149+03:00  INFO 15568 --- [training-backend] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-04-21T14:52:37.152+03:00  INFO 15568 --- [training-backend] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-04-21T14:52:43.779+03:00  INFO 4504 --- [training-backend] [main] c.m.t.TrainingBackendApplication         : Starting TrainingBackendApplication using Java 21.0.1 with PID 4504 (C:\Users\10390\Desktop\TRY\FullStack\personnel training\training-backend\target\classes started by 10390 in C:\Users\10390\Desktop\TRY\FullStack\personnel training\training-backend)
+2025-04-21T14:52:43.782+03:00  INFO 4504 --- [training-backend] [main] c.m.t.TrainingBackendApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-04-21T14:52:44.560+03:00  INFO 4504 --- [training-backend] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-21T14:52:44.639+03:00  INFO 4504 --- [training-backend] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 70 ms. Found 5 JPA repository interfaces.
+2025-04-21T14:52:45.147+03:00  INFO 4504 --- [training-backend] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8181 (http)
+2025-04-21T14:52:45.160+03:00  INFO 4504 --- [training-backend] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-21T14:52:45.160+03:00  INFO 4504 --- [training-backend] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-04-21T14:52:45.205+03:00  INFO 4504 --- [training-backend] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-21T14:52:45.206+03:00  INFO 4504 --- [training-backend] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1370 ms
+2025-04-21T14:52:45.345+03:00  INFO 4504 --- [training-backend] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-21T14:52:45.399+03:00  INFO 4504 --- [training-backend] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2025-04-21T14:52:45.429+03:00  INFO 4504 --- [training-backend] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-04-21T14:52:45.681+03:00  INFO 4504 --- [training-backend] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-21T14:52:45.705+03:00  INFO 4504 --- [training-backend] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-04-21T14:52:45.787+03:00  INFO 4504 --- [training-backend] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@26ffd2c0
+2025-04-21T14:52:45.789+03:00  INFO 4504 --- [training-backend] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-04-21T14:52:45.832+03:00  WARN 4504 --- [training-backend] [main] org.hibernate.dialect.Dialect            : HHH000511: The 11.10.0 version for [org.hibernate.dialect.PostgreSQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 12.0.0. Check the community dialects project for available legacy versions.
+2025-04-21T14:52:46.686+03:00  INFO 4504 --- [training-backend] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-21T14:52:46.938+03:00  INFO 4504 --- [training-backend] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-21T14:52:47.285+03:00  INFO 4504 --- [training-backend] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-04-21T14:52:47.309+03:00  WARN 4504 --- [training-backend] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-21T14:52:47.644+03:00  INFO 4504 --- [training-backend] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8181 (http) with context path '/'
+2025-04-21T14:52:47.651+03:00  INFO 4504 --- [training-backend] [main] c.m.t.TrainingBackendApplication         : Started TrainingBackendApplication in 4.378 seconds (process running for 5.248)
+2025-04-21T14:53:52.861+03:00  INFO 4504 --- [training-backend] [http-nio-8181-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-21T14:53:52.861+03:00  INFO 4504 --- [training-backend] [http-nio-8181-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-04-21T14:53:52.863+03:00  INFO 4504 --- [training-backend] [http-nio-8181-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-04-21T14:53:52.990+03:00  INFO 4504 --- [training-backend] [http-nio-8181-exec-2] c.m.t.c.TrainingCoursesController        : The object was received Roman Levanov
+2025-04-21T14:53:52.999+03:00  INFO 4504 --- [training-backend] [http-nio-8181-exec-2] c.m.t.service.OneSServiceImpl            : Sending request to http://172.16.2.222/Design1CDO2/hs/DataExchange/StaffTraining
+2025-04-21T14:54:00.005+03:00 ERROR 4504 --- [training-backend] [http-nio-8181-exec-2] c.m.t.service.OneSServiceImpl            : Error : org.springframework.web.client.HttpServerErrorException$InternalServerError: 500 Internal server error: "﻿{HTTPСервис.DataExchange.Модуль(371)}: Значение не является значением объектного типа (Подготовил)"
+2025-04-21T14:54:00.005+03:00  INFO 4504 --- [training-backend] [http-nio-8181-exec-2] c.m.t.c.TrainingCoursesController        : Error when sending
+2025-04-21T14:59:33.192+03:00  INFO 4504 --- [training-backend] [http-nio-8181-exec-3] c.m.t.c.TrainingCoursesController        : The object was received Roman Levanov
+2025-04-21T14:59:33.194+03:00  INFO 4504 --- [training-backend] [http-nio-8181-exec-3] c.m.t.service.OneSServiceImpl            : Sending request to http://172.16.2.222/Design1CDO2/hs/DataExchange/StaffTraining
+2025-04-21T15:01:46.331+03:00 ERROR 4504 --- [training-backend] [http-nio-8181-exec-3] c.m.t.service.OneSServiceImpl            : Error : org.springframework.web.client.HttpServerErrorException$InternalServerError: 500 Internal server error: "﻿{HTTPСервис.DataExchange.Модуль(371)}: Значение не является значением объектного типа (Подготовил)"
+2025-04-21T15:01:46.331+03:00  INFO 4504 --- [training-backend] [http-nio-8181-exec-3] c.m.t.c.TrainingCoursesController        : Error when sending
+2025-04-21T15:05:29.737+03:00  INFO 4504 --- [training-backend] [http-nio-8181-exec-5] c.m.t.c.TrainingCoursesController        : The object was received Мещеряков Игорь Николаевич
+2025-04-21T15:05:29.741+03:00  INFO 4504 --- [training-backend] [http-nio-8181-exec-5] c.m.t.service.OneSServiceImpl            : Sending request to http://172.16.2.222/Design1CDO2/hs/DataExchange/StaffTraining
+2025-04-21T15:06:35.817+03:00  INFO 4504 --- [training-backend] [http-nio-8181-exec-5] c.m.t.service.OneSServiceImpl            : Received response: 200 OK
+2025-04-21T15:06:35.817+03:00  INFO 4504 --- [training-backend] [http-nio-8181-exec-5] c.m.t.c.TrainingCoursesController        : The file has been sent
+2025-04-21T15:35:51.467+03:00  INFO 4504 --- [training-backend] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-04-21T15:35:51.474+03:00  INFO 4504 --- [training-backend] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-04-21T15:35:51.477+03:00  INFO 4504 --- [training-backend] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-04-21T15:35:57.229+03:00  INFO 17268 --- [training-backend] [main] c.m.t.TrainingBackendApplication         : Starting TrainingBackendApplication using Java 21.0.1 with PID 17268 (C:\Users\10390\Desktop\TRY\FullStack\personnel training\training-backend\target\classes started by 10390 in C:\Users\10390\Desktop\TRY\FullStack\personnel training\training-backend)
+2025-04-21T15:35:57.232+03:00  INFO 17268 --- [training-backend] [main] c.m.t.TrainingBackendApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-04-21T15:35:58.067+03:00  INFO 17268 --- [training-backend] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-21T15:35:58.161+03:00  INFO 17268 --- [training-backend] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 85 ms. Found 5 JPA repository interfaces.
+2025-04-21T15:35:58.680+03:00  INFO 17268 --- [training-backend] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8181 (http)
+2025-04-21T15:35:58.694+03:00  INFO 17268 --- [training-backend] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-21T15:35:58.694+03:00  INFO 17268 --- [training-backend] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-04-21T15:35:58.755+03:00  INFO 17268 --- [training-backend] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-21T15:35:58.755+03:00  INFO 17268 --- [training-backend] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1471 ms
+2025-04-21T15:35:58.947+03:00  INFO 17268 --- [training-backend] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-21T15:35:59.041+03:00  INFO 17268 --- [training-backend] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2025-04-21T15:35:59.093+03:00  INFO 17268 --- [training-backend] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-04-21T15:35:59.509+03:00  INFO 17268 --- [training-backend] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-21T15:35:59.560+03:00  INFO 17268 --- [training-backend] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-04-21T15:35:59.650+03:00  INFO 17268 --- [training-backend] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6bb4cc0e
+2025-04-21T15:35:59.652+03:00  INFO 17268 --- [training-backend] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-04-21T15:35:59.716+03:00  WARN 17268 --- [training-backend] [main] org.hibernate.dialect.Dialect            : HHH000511: The 11.10.0 version for [org.hibernate.dialect.PostgreSQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 12.0.0. Check the community dialects project for available legacy versions.
+2025-04-21T15:36:00.742+03:00  INFO 17268 --- [training-backend] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-21T15:36:01.007+03:00  INFO 17268 --- [training-backend] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-21T15:36:01.333+03:00  INFO 17268 --- [training-backend] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-04-21T15:36:01.356+03:00  WARN 17268 --- [training-backend] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-21T15:36:01.663+03:00  INFO 17268 --- [training-backend] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8181 (http) with context path '/'
+2025-04-21T15:36:01.670+03:00  INFO 17268 --- [training-backend] [main] c.m.t.TrainingBackendApplication         : Started TrainingBackendApplication in 5.041 seconds (process running for 5.842)
+2025-04-21T15:36:08.810+03:00  INFO 17268 --- [training-backend] [http-nio-8181-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-21T15:36:08.810+03:00  INFO 17268 --- [training-backend] [http-nio-8181-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-04-21T15:36:08.811+03:00  INFO 17268 --- [training-backend] [http-nio-8181-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-04-21T15:37:55.898+03:00  INFO 17268 --- [training-backend] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-04-21T15:37:55.900+03:00  INFO 17268 --- [training-backend] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-04-21T15:37:55.902+03:00  INFO 17268 --- [training-backend] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-04-21T15:38:00.155+03:00  INFO 16720 --- [training-backend] [main] c.m.t.TrainingBackendApplication         : Starting TrainingBackendApplication using Java 21.0.1 with PID 16720 (C:\Users\10390\Desktop\TRY\FullStack\personnel training\training-backend\target\classes started by 10390 in C:\Users\10390\Desktop\TRY\FullStack\personnel training\training-backend)
+2025-04-21T15:38:00.157+03:00  INFO 16720 --- [training-backend] [main] c.m.t.TrainingBackendApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-04-21T15:38:01.055+03:00  INFO 16720 --- [training-backend] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-21T15:38:01.151+03:00  INFO 16720 --- [training-backend] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 87 ms. Found 5 JPA repository interfaces.
+2025-04-21T15:38:01.763+03:00  INFO 16720 --- [training-backend] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8181 (http)
+2025-04-21T15:38:01.779+03:00  INFO 16720 --- [training-backend] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-21T15:38:01.779+03:00  INFO 16720 --- [training-backend] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-04-21T15:38:01.831+03:00  INFO 16720 --- [training-backend] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-21T15:38:01.831+03:00  INFO 16720 --- [training-backend] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1616 ms
+2025-04-21T15:38:01.981+03:00  INFO 16720 --- [training-backend] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-21T15:38:02.041+03:00  INFO 16720 --- [training-backend] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2025-04-21T15:38:02.068+03:00  INFO 16720 --- [training-backend] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-04-21T15:38:02.341+03:00  INFO 16720 --- [training-backend] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-21T15:38:02.366+03:00  INFO 16720 --- [training-backend] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-04-21T15:38:02.450+03:00  INFO 16720 --- [training-backend] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@38c761e9
+2025-04-21T15:38:02.452+03:00  INFO 16720 --- [training-backend] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-04-21T15:38:02.496+03:00  WARN 16720 --- [training-backend] [main] org.hibernate.dialect.Dialect            : HHH000511: The 11.10.0 version for [org.hibernate.dialect.PostgreSQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 12.0.0. Check the community dialects project for available legacy versions.
+2025-04-21T15:38:03.315+03:00  INFO 16720 --- [training-backend] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-21T15:38:03.561+03:00  INFO 16720 --- [training-backend] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-21T15:38:03.874+03:00  INFO 16720 --- [training-backend] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-04-21T15:38:03.895+03:00  WARN 16720 --- [training-backend] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-21T15:38:04.207+03:00  INFO 16720 --- [training-backend] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8181 (http) with context path '/'
+2025-04-21T15:38:04.213+03:00  INFO 16720 --- [training-backend] [main] c.m.t.TrainingBackendApplication         : Started TrainingBackendApplication in 4.782 seconds (process running for 5.685)
+2025-04-21T15:38:11.169+03:00  INFO 16720 --- [training-backend] [http-nio-8181-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-21T15:38:11.170+03:00  INFO 16720 --- [training-backend] [http-nio-8181-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-04-21T15:38:11.171+03:00  INFO 16720 --- [training-backend] [http-nio-8181-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-04-21T15:39:14.383+03:00  INFO 16720 --- [training-backend] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-04-21T15:39:14.386+03:00  INFO 16720 --- [training-backend] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-04-21T15:39:14.388+03:00  INFO 16720 --- [training-backend] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-04-21T15:39:19.052+03:00  INFO 6444 --- [training-backend] [main] c.m.t.TrainingBackendApplication         : Starting TrainingBackendApplication using Java 21.0.1 with PID 6444 (C:\Users\10390\Desktop\TRY\FullStack\personnel training\training-backend\target\classes started by 10390 in C:\Users\10390\Desktop\TRY\FullStack\personnel training\training-backend)
+2025-04-21T15:39:19.055+03:00  INFO 6444 --- [training-backend] [main] c.m.t.TrainingBackendApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-04-21T15:39:19.901+03:00  INFO 6444 --- [training-backend] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-21T15:39:19.987+03:00  INFO 6444 --- [training-backend] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 77 ms. Found 5 JPA repository interfaces.
+2025-04-21T15:39:20.493+03:00  INFO 6444 --- [training-backend] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8181 (http)
+2025-04-21T15:39:20.507+03:00  INFO 6444 --- [training-backend] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-21T15:39:20.508+03:00  INFO 6444 --- [training-backend] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-04-21T15:39:20.557+03:00  INFO 6444 --- [training-backend] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-21T15:39:20.557+03:00  INFO 6444 --- [training-backend] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1429 ms
+2025-04-21T15:39:20.697+03:00  INFO 6444 --- [training-backend] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-21T15:39:20.751+03:00  INFO 6444 --- [training-backend] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2025-04-21T15:39:20.778+03:00  INFO 6444 --- [training-backend] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-04-21T15:39:21.049+03:00  INFO 6444 --- [training-backend] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-21T15:39:21.078+03:00  INFO 6444 --- [training-backend] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-04-21T15:39:21.163+03:00  INFO 6444 --- [training-backend] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@25567581
+2025-04-21T15:39:21.165+03:00  INFO 6444 --- [training-backend] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-04-21T15:39:21.220+03:00  WARN 6444 --- [training-backend] [main] org.hibernate.dialect.Dialect            : HHH000511: The 11.10.0 version for [org.hibernate.dialect.PostgreSQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 12.0.0. Check the community dialects project for available legacy versions.
+2025-04-21T15:39:22.044+03:00  INFO 6444 --- [training-backend] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-21T15:39:22.301+03:00  INFO 6444 --- [training-backend] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-21T15:39:22.606+03:00  INFO 6444 --- [training-backend] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-04-21T15:39:22.628+03:00  WARN 6444 --- [training-backend] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-21T15:39:22.950+03:00  INFO 6444 --- [training-backend] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8181 (http) with context path '/'
+2025-04-21T15:39:22.956+03:00  INFO 6444 --- [training-backend] [main] c.m.t.TrainingBackendApplication         : Started TrainingBackendApplication in 4.445 seconds (process running for 5.188)
+2025-04-21T15:39:31.540+03:00  INFO 6444 --- [training-backend] [http-nio-8181-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-21T15:39:31.540+03:00  INFO 6444 --- [training-backend] [http-nio-8181-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-04-21T15:39:31.541+03:00  INFO 6444 --- [training-backend] [http-nio-8181-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-04-21T15:45:41.231+03:00  INFO 6444 --- [training-backend] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-04-21T15:45:41.233+03:00  INFO 6444 --- [training-backend] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-04-21T15:45:41.236+03:00  INFO 6444 --- [training-backend] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-04-21T15:45:45.632+03:00  INFO 13240 --- [training-backend] [main] c.m.t.TrainingBackendApplication         : Starting TrainingBackendApplication using Java 21.0.1 with PID 13240 (C:\Users\10390\Desktop\TRY\FullStack\personnel training\training-backend\target\classes started by 10390 in C:\Users\10390\Desktop\TRY\FullStack\personnel training\training-backend)
+2025-04-21T15:45:45.634+03:00  INFO 13240 --- [training-backend] [main] c.m.t.TrainingBackendApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-04-21T15:45:46.442+03:00  INFO 13240 --- [training-backend] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-21T15:45:46.525+03:00  INFO 13240 --- [training-backend] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 74 ms. Found 5 JPA repository interfaces.
+2025-04-21T15:45:47.062+03:00  INFO 13240 --- [training-backend] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8181 (http)
+2025-04-21T15:45:47.078+03:00  INFO 13240 --- [training-backend] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-21T15:45:47.078+03:00  INFO 13240 --- [training-backend] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-04-21T15:45:47.133+03:00  INFO 13240 --- [training-backend] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-21T15:45:47.133+03:00  INFO 13240 --- [training-backend] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1447 ms
+2025-04-21T15:45:47.315+03:00  INFO 13240 --- [training-backend] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-21T15:45:47.367+03:00  INFO 13240 --- [training-backend] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2025-04-21T15:45:47.404+03:00  INFO 13240 --- [training-backend] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-04-21T15:45:47.694+03:00  INFO 13240 --- [training-backend] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-21T15:45:47.722+03:00  INFO 13240 --- [training-backend] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-04-21T15:45:47.809+03:00  INFO 13240 --- [training-backend] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@c472300
+2025-04-21T15:45:47.811+03:00  INFO 13240 --- [training-backend] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-04-21T15:45:47.850+03:00  WARN 13240 --- [training-backend] [main] org.hibernate.dialect.Dialect            : HHH000511: The 11.10.0 version for [org.hibernate.dialect.PostgreSQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 12.0.0. Check the community dialects project for available legacy versions.
+2025-04-21T15:45:48.779+03:00  INFO 13240 --- [training-backend] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-21T15:45:49.033+03:00  INFO 13240 --- [training-backend] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-21T15:45:49.354+03:00  INFO 13240 --- [training-backend] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-04-21T15:45:49.377+03:00  WARN 13240 --- [training-backend] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-21T15:45:49.696+03:00  INFO 13240 --- [training-backend] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8181 (http) with context path '/'
+2025-04-21T15:45:49.702+03:00  INFO 13240 --- [training-backend] [main] c.m.t.TrainingBackendApplication         : Started TrainingBackendApplication in 4.643 seconds (process running for 5.383)
+2025-04-21T15:46:05.168+03:00  INFO 13240 --- [training-backend] [http-nio-8181-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-21T15:46:05.169+03:00  INFO 13240 --- [training-backend] [http-nio-8181-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-04-21T15:46:05.170+03:00  INFO 13240 --- [training-backend] [http-nio-8181-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-04-21T17:04:33.551+03:00  INFO 13240 --- [training-backend] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-04-21T17:04:33.575+03:00  INFO 13240 --- [training-backend] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-04-21T17:04:33.579+03:00  INFO 13240 --- [training-backend] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

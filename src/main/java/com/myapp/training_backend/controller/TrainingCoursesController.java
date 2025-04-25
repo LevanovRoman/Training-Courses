@@ -2,18 +2,16 @@ package com.myapp.training_backend.controller;
 
 import com.myapp.training_backend.dto.CoursesDto;
 import com.myapp.training_backend.dto.RequestDto;
+import com.myapp.training_backend.dto.request.OneSRequestDto;
 import com.myapp.training_backend.dto.response.DepartmentResponseDto;
-import com.myapp.training_backend.dto.ResponseDto;
 import com.myapp.training_backend.dto.response.PositionResponseDto;
-import com.myapp.training_backend.entity.Department;
-import com.myapp.training_backend.entity.Position;
-import com.myapp.training_backend.entity.TrainingCoursesList;
-import com.myapp.training_backend.repository.DepartmentRepository;
-import com.myapp.training_backend.repository.PositionRepository;
-import com.myapp.training_backend.repository.TrainingCoursesRepository;
 import com.myapp.training_backend.service.DepartmentService;
+import com.myapp.training_backend.service.OneSService;
 import com.myapp.training_backend.service.PositionService;
 import com.myapp.training_backend.service.TrainingCoursesService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -23,14 +21,18 @@ import java.util.List;
 @RequestMapping("/api/courses")
 public class TrainingCoursesController {
 
+    private static final Logger logger = LoggerFactory.getLogger(TrainingCoursesController.class);
+
     private final DepartmentService departmentService;
     private final PositionService positionService;
     private final TrainingCoursesService trainingCoursesService;
+    private final OneSService oneSService;
 
-    public TrainingCoursesController(DepartmentService departmentService, PositionService positionService, TrainingCoursesService trainingCoursesService) {
+    public TrainingCoursesController(DepartmentService departmentService, PositionService positionService, TrainingCoursesService trainingCoursesService, OneSService oneSService) {
         this.departmentService = departmentService;
         this.positionService = positionService;
         this.trainingCoursesService = trainingCoursesService;
+        this.oneSService = oneSService;
     }
 
     @GetMapping("/all-departments")
@@ -41,6 +43,19 @@ public class TrainingCoursesController {
     @GetMapping("/all-positions")
     public ResponseEntity<List<PositionResponseDto>> getAllPositions(){
         return ResponseEntity.ok(positionService.getAllPositions());
+    }
+
+    @PostMapping("/transfer-to-1s")
+    public ResponseEntity<String> transferDataTo1s(@RequestBody OneSRequestDto oneSRequestDto){
+        logger.info("The object was received {}", oneSRequestDto.author());
+        boolean success = oneSService.transferDataTo1s(oneSRequestDto);
+        if (success) {
+            logger.info("The file has been sent");
+            return ResponseEntity.ok("Файл отправлен в 1С");
+        } else {
+            logger.info("Error when sending");
+            return ResponseEntity.status(HttpStatus.BAD_GATEWAY).body("Ошибка при отправке в 1С");
+        }
     }
 
 //  TEST
