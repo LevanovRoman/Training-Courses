@@ -24,17 +24,8 @@ public class WebConfig {
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         CorsConfiguration config = new CorsConfiguration();
         config.setAllowCredentials(true);
-        config.addAllowedOrigin("http://localhost:8080");
         config.addAllowedOrigin("http://localhost:5173");
         config.addAllowedOrigin("http://localhost:3100");
-        config.addAllowedOrigin("http://localhost");
-        config.addAllowedOrigin("http://172.16.15.92:8000");
-        config.addAllowedOrigin("http://172.16.15.92");
-        config.addAllowedOrigin("http://production_system-test.nordsy.spb.ru");
-        config.addAllowedOrigin("http://production-system.nordsy.spb.ru");
-        config.addAllowedOrigin("http://www.production-system.nordsy.spb.ru");
-        config.addAllowedOrigin("https://production-system.nordsy.spb.ru");
-        config.addAllowedOrigin("https://www.production-system.nordsy.spb.ru");
         config.setAllowedHeaders(Arrays.asList(
                 HttpHeaders.AUTHORIZATION,
                 HttpHeaders.CONTENT_TYPE,

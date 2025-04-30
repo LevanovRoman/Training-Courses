@@ -2,14 +2,13 @@ package com.myapp.training_backend.service;
 
 import com.myapp.training_backend.dto.CoursesDto;
 import com.myapp.training_backend.dto.RequestDto;
-import com.myapp.training_backend.dto.request.OneSRequestDto;
 import com.myapp.training_backend.entity.Department;
 import com.myapp.training_backend.entity.Position;
-import com.myapp.training_backend.entity.TrainingCoursesList;
+import com.myapp.training_backend.entity.TrainingCourse;
 import com.myapp.training_backend.exceptions.ObjectNotFoundException;
 import com.myapp.training_backend.repository.DepartmentRepository;
 import com.myapp.training_backend.repository.PositionRepository;
-import com.myapp.training_backend.repository.TrainingCoursesRepository;
+import com.myapp.training_backend.repository.TrainingCourseRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -17,11 +16,11 @@ import java.util.List;
 @Service
 public class TrainingCoursesServiceImpl implements TrainingCoursesService {
 
-    private final TrainingCoursesRepository trainingCoursesRepository;
+    private final TrainingCourseRepository trainingCoursesRepository;
     private final PositionRepository positionRepository;
     private final DepartmentRepository departmentRepository;
 
-    public TrainingCoursesServiceImpl(TrainingCoursesRepository trainingCoursesRepository, PositionRepository positionRepository, DepartmentRepository departmentRepository) {
+    public TrainingCoursesServiceImpl(TrainingCourseRepository trainingCoursesRepository, PositionRepository positionRepository, DepartmentRepository departmentRepository) {
         this.trainingCoursesRepository = trainingCoursesRepository;
         this.positionRepository = positionRepository;
         this.departmentRepository = departmentRepository;
@@ -38,7 +37,7 @@ public class TrainingCoursesServiceImpl implements TrainingCoursesService {
         return coursesDtoList;
     }
 
-    private CoursesDto convertToCoursesDto(TrainingCoursesList trainingCourse) {
+    private CoursesDto convertToCoursesDto(TrainingCourse trainingCourse) {
         return new CoursesDto(trainingCourse.getCourse().getCourse());
     }
 

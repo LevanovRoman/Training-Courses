@@ -1,12 +1,12 @@
-package com.myapp.training_backend.transit;
+package com.myapp.training_backend.extractFromFileToDB;
 
 import com.myapp.training_backend.entity.Department;
 import com.myapp.training_backend.entity.Position;
-import com.myapp.training_backend.entity.TrainingCoursesList;
+import com.myapp.training_backend.entity.TrainingCourse;
 import com.myapp.training_backend.entity.TrainingField;
 import com.myapp.training_backend.repository.DepartmentRepository;
 import com.myapp.training_backend.repository.PositionRepository;
-import com.myapp.training_backend.repository.TrainingCoursesRepository;
+import com.myapp.training_backend.repository.TrainingCourseRepository;
 import com.myapp.training_backend.repository.TrainingFieldRepository;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
@@ -33,10 +33,10 @@ public class ExcelService {
 
     private final TrainingFieldRepository trainingFieldRepository;
     private final PositionRepository handbookPositionRepository;
-    private final TrainingCoursesRepository trainingCoursesRepository;
+    private final TrainingCourseRepository trainingCoursesRepository;
     private final DepartmentRepository handbookDepartmentRepository;
 
-    public ExcelService(TrainingFieldRepository trainingFieldRepository, PositionRepository handbookPositionRepository, TrainingCoursesRepository trainingCoursesRepository, DepartmentRepository handbookDepartmentRepository) {
+    public ExcelService(TrainingFieldRepository trainingFieldRepository, PositionRepository handbookPositionRepository, TrainingCourseRepository trainingCoursesRepository, DepartmentRepository handbookDepartmentRepository) {
         this.trainingFieldRepository = trainingFieldRepository;
         this.handbookPositionRepository = handbookPositionRepository;
         this.trainingCoursesRepository = trainingCoursesRepository;
@@ -78,14 +78,14 @@ public class ExcelService {
 //                System.out.println(position.getId() + ", " + course.getId());
                 Department department = handbookDepartmentRepository.findById(departmentId)
                         .orElseThrow(RuntimeException::new);
-                Optional<TrainingCoursesList> existing = trainingCoursesRepository
+                Optional<TrainingCourse> existing = trainingCoursesRepository
                         .findByDepartmentAndPositionAndCourse(department, position, course);
                 if (existing.isEmpty()){
-                    TrainingCoursesList trainingCoursesList = new TrainingCoursesList();
+                    TrainingCourse trainingCoursesList = new TrainingCourse();
                     trainingCoursesList.setDepartment(department);
                     trainingCoursesList.setPosition(position);
                     trainingCoursesList.setCourse(course);
-                    TrainingCoursesList saved = trainingCoursesRepository.save(trainingCoursesList);
+                    TrainingCourse saved = trainingCoursesRepository.save(trainingCoursesList);
                     logger.info("Saved: positionId={}, courseId={}",
                             saved.getPosition().getName(), saved.getCourse().getCourse());
 //                    System.out.println(counter);

@@ -65,31 +65,4 @@ public class TrainingCoursesController {
     public ResponseEntity<List<CoursesDto>> getResult(@RequestBody RequestDto request){
         return ResponseEntity.ok(trainingCoursesService.getResult(request));
     }
-
-//    @GetMapping("/test")
-//    public ResponseEntity<List<ResponseDto>> getRequest(){
-//        List<TrainingCoursesList> allCourses = trainingCoursesRepository.findAll();
-//        return ResponseEntity.ok(allCourses.stream().map(this::convertToDto).toList());
-//    }
-//
-//    @GetMapping("/courses")
-//    public ResponseEntity<List<CoursesDto>> getCoursesByDepartmentAndPosition(@RequestParam int departmentId,
-//                                                                              @RequestParam int positionId){
-//        System.out.println("CONTROLLER");
-//        Department handbookDepartment = departmentRepository.findById(departmentId).orElseThrow();
-//        Position handbookPosition = positionRepository.findById(positionId).orElseThrow();
-//        List<CoursesDto> coursesDtoList = trainingCoursesRepository.findAllByDepartmentAndPosition(handbookDepartment, handbookPosition)
-//                .stream().map(this::convertToCoursesDto).toList();
-//        return ResponseEntity.ok(coursesDtoList);
-//    }
-//
-//    private CoursesDto convertToCoursesDto(TrainingCoursesList trainingCourse) {
-//        return new CoursesDto(trainingCourse.getCourse().getCourse());
-//    }
-//
-//    private ResponseDto convertToDto(TrainingCoursesList course) {
-//        return new ResponseDto(course.getDepartment().getId(),
-//                course.getPosition().getId(),
-//                course.getCourse().getId());
-//    }
 }

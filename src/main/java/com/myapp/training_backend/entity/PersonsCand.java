@@ -4,11 +4,13 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import lombok.Getter;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
 @Entity
+@Getter
 @Table(name = "persons_cand")
 public class PersonsCand {
     @Id
@@ -101,124 +103,4 @@ public class PersonsCand {
 
     @Column(name = "appoint_from")
     private LocalDate appointFrom;
-
-    public Integer getId() {
-        return id;
-    }
-
-    public Long getEmpId() {
-        return empId;
-    }
-
-    public String getTabN() {
-        return tabN;
-    }
-
-    public String getlName() {
-        return lName;
-    }
-
-    public String getfName() {
-        return fName;
-    }
-
-    public String getmName() {
-        return mName;
-    }
-
-    public String getFullName() {
-        return fullName;
-    }
-
-    public String getFullNameIo() {
-        return fullNameIo;
-    }
-
-    public String getSex() {
-        return sex;
-    }
-
-    public LocalDate getdBirth() {
-        return dBirth;
-    }
-
-    public String getInn() {
-        return inn;
-    }
-
-    public String getSnn() {
-        return snn;
-    }
-
-    public LocalDate getdFrom() {
-        return dFrom;
-    }
-
-    public BigDecimal getAppointId() {
-        return appointId;
-    }
-
-    public String getAppointName() {
-        return appointName;
-    }
-
-    public BigDecimal getCategId() {
-        return categId;
-    }
-
-    public String getCategName() {
-        return categName;
-    }
-
-    public LocalDate getdIn() {
-        return dIn;
-    }
-
-    public LocalDate getdOut() {
-        return dOut;
-    }
-
-    public BigDecimal getDeptId() {
-        return deptId;
-    }
-
-    public String getDeptName() {
-        return deptName;
-    }
-
-    public BigDecimal getDeptRootId() {
-        return deptRootId;
-    }
-
-    public String getDeptRootName() {
-        return deptRootName;
-    }
-
-    public String getGuid1c() {
-        return guid1c;
-    }
-
-    public LocalDate getMdate() {
-        return mdate;
-    }
-
-    public BigDecimal getPlanHours() {
-        return planHours;
-    }
-
-    public BigDecimal getFactHours() {
-        return factHours;
-    }
-
-    public BigDecimal getActualDeptRootId() {
-        return actualDeptRootId;
-    }
-
-    public String getActualDeptRootName() {
-        return actualDeptRootName;
-    }
-
-    public LocalDate getAppointFrom() {
-        return appointFrom;
-    }
 }
