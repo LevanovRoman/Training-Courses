@@ -27,8 +27,8 @@ class DepartmentServiceImplTest {
     @Test
     public void testGetAllDepartments_ReturnsListOfDepartments() {
         // 1. Подготовка тестовых данных
-        Department department1 = new Department(1, "HR");
-        Department department2 = new Department(2, "IT");
+        Department department1 = Department.builder().id(1).deptRootName("HR").build();
+        Department department2 = Department.builder().id(2).deptRootName("IT").build();
         List<Department> mockDepartments = List.of(department1, department2);
 
         // 2. Мокируем вызов repository.findAll()
