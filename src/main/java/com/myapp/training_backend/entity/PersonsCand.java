@@ -4,13 +4,19 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
 @Entity
 @Getter
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 @Table(name = "persons_cand")
 public class PersonsCand {
     @Id
@@ -54,13 +60,13 @@ public class PersonsCand {
     private LocalDate dFrom;
 
     @Column(name = "appoint_id", nullable = false)
-    private BigDecimal appointId;
+    private Integer appointId;
 
     @Column(name = "appoint_name", nullable = false, length = 120)
     private String appointName;
 
     @Column(name = "categ_id", nullable = false)
-    private BigDecimal categId;
+    private Integer categId;
 
     @Column(name = "categ_name", nullable = false, length = 44)
     private String categName;
@@ -72,13 +78,13 @@ public class PersonsCand {
     private LocalDate dOut;
 
     @Column(name = "dept_id", nullable = false)
-    private BigDecimal deptId;
+    private Integer deptId;
 
     @Column(name = "dept_name", nullable = false, length = 100)
     private String deptName;
 
     @Column(name = "dept_root_id")
-    private BigDecimal deptRootId;
+    private Integer deptRootId;
 
     @Column(name = "dept_root_name", length = 4000)
     private String deptRootName;
@@ -90,13 +96,13 @@ public class PersonsCand {
     private LocalDate mdate;
 
     @Column(name = "plan_hours")
-    private BigDecimal planHours;
+    private Double planHours;
 
     @Column(name = "fact_hours")
-    private BigDecimal factHours;
+    private Double factHours;
 
     @Column(name = "actual_dept_root_id")
-    private BigDecimal actualDeptRootId;
+    private Integer actualDeptRootId;
 
     @Column(name = "actual_dept_root_name", length = 4000)
     private String actualDeptRootName;
