@@ -19,6 +19,7 @@ public class TestController {
 
     @GetMapping("/today")
     public ResponseEntity<String> getAllDepartments(){
+        System.out.println("CONTROLLER");
         List<PersonsCand> personsCandList = personsCandService.getPersonsByToday();
         personsCandList.forEach((el) -> System.out.println(
                 el.getFullName() + " -- " + el.getTabN() + " -- " + el.getAppointName() + " -- " + el.getDeptName()

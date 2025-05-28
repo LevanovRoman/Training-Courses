@@ -9,6 +9,7 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.List;
 
@@ -28,29 +29,29 @@ class PersonsCandServiceImplTest {
     void testGetPersonsByToday_ReturnsListOfPersons() {
         // data
         PersonsCand personsCand1 = PersonsCand.builder()
-                .id(2345)
-                .empId(8888L)
+                .id(BigDecimal.valueOf(2345))
+                .empId(BigDecimal.valueOf(8888L))
                 .lName("TestLastName")
-                .appointId(3333)
+                .appointId(BigDecimal.valueOf(3333))
                 .appointName("строитель кораблей")
-                .categId(44)
+                .categId(BigDecimal.valueOf(44))
                 .categName("вспомогательные рабочие")
                 .dIn(LocalDate.ofEpochDay(2013- 7 -22))
                 .dOut(LocalDate.ofEpochDay(2020-6-12))
-                .deptId(1111)
+                .deptId(BigDecimal.valueOf(1111))
                 .deptName("021 паросиловой цех")
                 .build();
         PersonsCand personsCand2 = PersonsCand.builder()
-                .id(2346)
-                .empId(8188L)
+                .id(BigDecimal.valueOf(2346))
+                .empId(BigDecimal.valueOf(8188L))
                 .lName("TestLastName2")
-                .appointId(3333)
+                .appointId(BigDecimal.valueOf(3333))
                 .appointName("строитель кораблей")
-                .categId(44)
+                .categId(BigDecimal.valueOf(44))
                 .categName("вспомогательные рабочие")
                 .dIn(LocalDate.ofEpochDay(2013- 7 -22))
                 .dOut(LocalDate.ofEpochDay(2020-6-12))
-                .deptId(1111)
+                .deptId(BigDecimal.valueOf(1111))
                 .deptName("021 паросиловой цех")
                 .build();
         List<PersonsCand> mockPersonsCandList = List.of(personsCand1, personsCand2);

@@ -16,7 +16,10 @@ public class PersonsCandServiceImpl implements PersonsCandService{
 
     @Override
     public List<PersonsCand> getPersonsByToday() {
+        System.out.println("SERVICE");
         LocalDate today = LocalDate.now(); // Текущая дата
-        return personsCandRepository.findByDateInToday(today);
+        List<PersonsCand> byDateInToday = personsCandRepository.findByDateInToday(today);
+        System.out.println("BY" + byDateInToday);
+        return byDateInToday;
     }
 }

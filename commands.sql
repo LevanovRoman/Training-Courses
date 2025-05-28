@@ -1,4 +1,10 @@
 -- ALTER TABLE training_field DROP COLUMN training_field_id;
+CREATE TABLE training_courses (
+                                  id BIGINT PRIMARY KEY,
+                                  dept_root_id INTEGER REFERENCES handbook_department(dept_root_id),
+                                  appoint_id INTEGER REFERENCES handbook_position(appoint_id),
+                                  training_field_id INTEGER REFERENCES training_field(id)
+);
 
 INSERT INTO training_courses (dept_root_id, appoint_id, training_field_id) VALUES
                                                                                (2647, 1595, 144),

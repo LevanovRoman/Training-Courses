@@ -9,6 +9,7 @@ import org.springframework.boot.jdbc.EmbeddedDatabaseConnection;
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.List;
 
@@ -24,31 +25,31 @@ class PersonsCandRepositoryTest {
     @BeforeEach
     public void setUp(){
         PersonsCand personsCand1 = PersonsCand.builder()
-                .id(2345)
-                .empId(8888L)
+                .id(BigDecimal.valueOf(2345))
+                .empId(BigDecimal.valueOf(8888L))
                 .lName("TestLastName")
                 .dFrom(LocalDate.of(2020, 5, 23))
-                .appointId(3333)
+                .appointId(BigDecimal.valueOf(3333))
                 .appointName("строитель кораблей")
-                .categId(44)
+                .categId(BigDecimal.valueOf(44))
                 .categName("вспомогательные рабочие")
                 .dIn(LocalDate.of(2025, 1, 12))
                 .dOut(LocalDate.of(2020,6,12))
-                .deptId(1111)
+                .deptId(BigDecimal.valueOf(1111))
                 .deptName("021 паросиловой цех")
                 .build();
         PersonsCand personsCand2 = PersonsCand.builder()
-                .id(2346)
-                .empId(8188L)
+                .id(BigDecimal.valueOf(2346))
+                .empId(BigDecimal.valueOf(8188L))
                 .lName("TestLastName2")
                 .dFrom(LocalDate.of(2020, 5, 24))
-                .appointId(3333)
+                .appointId(BigDecimal.valueOf(3333))
                 .appointName("строитель кораблей")
-                .categId(44)
+                .categId(BigDecimal.valueOf(44))
                 .categName("вспомогательные рабочие")
                 .dIn(LocalDate.of(2025, 1, 12))
                 .dOut(LocalDate.ofEpochDay(2020-6-12))
-                .deptId(1111)
+                .deptId(BigDecimal.valueOf(1111))
                 .deptName("021 паросиловой цех")
                 .build();
         personsCandRepository.save(personsCand1);

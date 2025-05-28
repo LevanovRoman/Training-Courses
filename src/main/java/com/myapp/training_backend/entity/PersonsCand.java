@@ -21,10 +21,10 @@ import java.time.LocalDate;
 public class PersonsCand {
     @Id
     @Column(name = "card_id", nullable = false)
-    private Integer id;
+    private BigDecimal  id;
 
     @Column(name = "emp_id", nullable = false)
-    private Long empId;
+    private BigDecimal empId;
 
     @Column(name = "tab_n", length = 7)
     private String tabN;
@@ -60,13 +60,13 @@ public class PersonsCand {
     private LocalDate dFrom;
 
     @Column(name = "appoint_id", nullable = false)
-    private Integer appointId;
+    private BigDecimal appointId;
 
     @Column(name = "appoint_name", nullable = false, length = 120)
     private String appointName;
 
     @Column(name = "categ_id", nullable = false)
-    private Integer categId;
+    private BigDecimal categId;
 
     @Column(name = "categ_name", nullable = false, length = 44)
     private String categName;
@@ -78,13 +78,13 @@ public class PersonsCand {
     private LocalDate dOut;
 
     @Column(name = "dept_id", nullable = false)
-    private Integer deptId;
+    private BigDecimal deptId;
 
     @Column(name = "dept_name", nullable = false, length = 100)
     private String deptName;
 
     @Column(name = "dept_root_id")
-    private Integer deptRootId;
+    private BigDecimal deptRootId;
 
     @Column(name = "dept_root_name", length = 4000)
     private String deptRootName;
@@ -96,17 +96,20 @@ public class PersonsCand {
     private LocalDate mdate;
 
     @Column(name = "plan_hours")
-    private Double planHours;
+    private BigDecimal planHours;
 
     @Column(name = "fact_hours")
-    private Double factHours;
+    private BigDecimal factHours;
 
     @Column(name = "actual_dept_root_id")
-    private Integer actualDeptRootId;
+    private BigDecimal actualDeptRootId;
 
     @Column(name = "actual_dept_root_name", length = 4000)
     private String actualDeptRootName;
 
     @Column(name = "appoint_from")
     private LocalDate appointFrom;
+
+    @Column(name = "mob_or_prg")
+    private BigDecimal mobOrPrg;
 }
