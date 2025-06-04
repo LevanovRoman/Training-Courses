@@ -4,7 +4,6 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -20,8 +19,8 @@ public class ExtractController {
 
     private final ExcelService excelService;
 
-    @GetMapping("/{departmentId}")
-    public ResponseEntity<String> extractFromFileToDb(@PathVariable("departmentId") String departmentId){
+    @GetMapping
+    public ResponseEntity<String> extractFromFileToDb(){
         try{
             excelService.processExcelFile(path);
             return ResponseEntity.ok("Success");

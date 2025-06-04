@@ -27,7 +27,7 @@ import java.util.Optional;
 public class ExcelService {
 
     @Value("${project.departmentId}")
-    int departmentId;
+    int departmentId;   // значение dept_root_id из таблицы handbook_department
 
     private static final Logger logger = LoggerFactory.getLogger(ExcelService.class);
 
@@ -61,35 +61,41 @@ public class ExcelService {
 
             if (!positionStr.isEmpty()) {
                 currentPosition = positionStr;
-//                System.out.println("currentPosition  " + currentPosition);
+                System.out.println("currentPosition  " + currentPosition);
             }
 
             if (currentPosition != null && !courseStr.isEmpty()) {
 //                Optional<HandbookPosition> position = handbookPositionRepository.findByNameIgnoreCase(currentPosition);
                 List<Position> positionList = handbookPositionRepository.findAllByNameIgnoreCase(currentPosition);
                 Position position = positionList.getFirst();
-//                System.out.println("PO  " + position.getId());
+                System.out.println("PO  " + position.getId());
                 List<TrainingField> courseList = trainingFieldRepository.findAllByCourse(courseStr);
                 TrainingField course = courseList.getFirst();
 //                Optional<TrainingField> course = trainingFieldRepository.findFirstByTitle(courseStr);
 
-//                System.out.println("COU  " + course.getId());
+                System.out.println("COU  " + course.getId());
 
-//                System.out.println(position.getId() + ", " + course.getId());
+                System.out.println(position.getId() + ", " + course.getId());
                 Department department = handbookDepartmentRepository.findById(departmentId)
                         .orElseThrow(RuntimeException::new);
                 Optional<TrainingCourse> existing = trainingCoursesRepository
                         .findByDepartmentAndPositionAndCourse(department, position, course);
                 if (existing.isEmpty()){
-                    TrainingCourse trainingCoursesList = new TrainingCourse();
-                    trainingCoursesList.setDepartment(department);
-                    trainingCoursesList.setPosition(position);
-                    trainingCoursesList.setCourse(course);
+//                    TrainingCourse trainingCoursesList = new TrainingCourse();
+//                    trainingCoursesList.setDepartment(department);
+//                    trainingCoursesList.setPosition(position);
+//                    trainingCoursesList.setCourse(course);
+                    TrainingCourse trainingCoursesList = TrainingCourse.builder()
+                            .department(department)
+                            .position(position)
+                            .course(course)
+                            .build();
+
                     TrainingCourse saved = trainingCoursesRepository.save(trainingCoursesList);
                     logger.info("Saved: positionId={}, courseId={}",
                             saved.getPosition().getName(), saved.getCourse().getCourse());
-//                    System.out.println(counter);
-//                    System.out.println(trainingCoursesList);
+                    System.out.println(counter);
+                    System.out.println(trainingCoursesList);
                     counter++;
                 }
             }

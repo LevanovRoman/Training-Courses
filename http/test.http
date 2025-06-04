@@ -29,6 +29,6 @@ Content-Type: application/json
 GET http://localhost:8181/api/test/today
 
 ###
-GET http://localhost:8181/api/extract/2647
+GET http://localhost:8181/api/extract
 
 
