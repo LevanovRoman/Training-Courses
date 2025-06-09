@@ -52,3 +52,5 @@ INSERT INTO training_courses (dept_root_id, appoint_id, training_field_id) VALUE
                                                                                (2647, 1575, 113);
 
 SELECT * FROM handbook_position p WHERE p.appoint_name like 'Пожарно-технический минимум' ORDER BY p.appoint_id ASC;
+
+SELECT * FROM persons_cand p WHERE p.d_in = now();

@@ -31,4 +31,6 @@ GET http://localhost:8181/api/test/today
 ###
 GET http://localhost:8181/api/extract
 
+###
+GET http://172.16.15.77:8181/api/courses/all-departments
 

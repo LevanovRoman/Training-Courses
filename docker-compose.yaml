@@ -1,8 +1,6 @@
 services:
   portal-server:
     container_name: staff_training
-    environment:
-      - TZ=${TZ}
     build:
       dockerfile: Dockerfile
       args:
@@ -11,42 +9,15 @@ services:
       - .env
     ports:
       - 8181:8181
-#    volumes:
-#      - spring-photo:/home/photos
-#      - spring-book:/home/books
-#      - spring-document:/home/documents
-#      - spring-backups:/home/backups
-#      - spring-log:/home/logs
+    volumes:
+      - spring-log:/home/logs
     restart: always
 
-#volumes:
-#  spring-photo:
-#    driver: local
-#    driver_opts:
-#      o: bind
-#      type: none
-#      device: "/home/astra/photo"
-#  spring-book:
-#    driver: local
-#    driver_opts:
-#      o: bind
-#      type: none
-#      device: "/home/astra/book"
-#  spring-document:
-#    driver: local
-#    driver_opts:
-#      o: bind
-#      type: none
-#      device: "/home/astra/document"
-#  spring-backups:
-#    driver: local
-#    driver_opts:
-#      o: bind
-#      type: none
-#      device: "/home/astra/backups"
-#  spring-log:
-#    driver: local
-#    driver_opts:
-#      o: bind
-#      type: none
-#      device: "/home/astra/logs"
+volumes:
+  spring-log:
+    driver: local
+    driver_opts:
+      o: bind
+      type: none
+      device: "/home/astra/logs/staff-training"
+

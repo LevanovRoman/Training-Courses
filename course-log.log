@@ -1124,3 +1124,6 @@ Caused by: org.hibernate.tool.schema.spi.SchemaManagementException: Schema-valid
 2025-06-04T14:42:27.391+03:00  INFO 11864 --- [training-backend] [http-nio-8181-exec-1] c.m.t.extractFromFileToDB.ExcelService   : Saved: positionId=начальник цеха, courseId=Общие требования промышленной безопасности (А.1)
 2025-06-04T14:42:27.400+03:00  INFO 11864 --- [training-backend] [http-nio-8181-exec-1] c.m.t.extractFromFileToDB.ExcelService   : Saved: positionId=начальник цеха, courseId=Организация и проведение обучения по использованию (применению) средств индивидуальной защиты
 2025-06-04T14:42:27.408+03:00  INFO 11864 --- [training-backend] [http-nio-8181-exec-1] c.m.t.extractFromFileToDB.ExcelService   : Saved: positionId=начальник цеха, courseId=Оказание первой помощи пострадавшему на производстве
+2025-06-04T17:02:29.350+03:00  INFO 11864 --- [training-backend] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-06-04T17:02:29.635+03:00  INFO 11864 --- [training-backend] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-06-04T17:02:29.696+03:00  INFO 11864 --- [training-backend] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
