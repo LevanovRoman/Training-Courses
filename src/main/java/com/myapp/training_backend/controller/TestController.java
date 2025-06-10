@@ -27,4 +27,10 @@ public class TestController {
         ));
         return ResponseEntity.ok("OK");
     }
+
+    @GetMapping("/person")
+    public String testEncoding() {
+        personsCandService.getPersonsByToday();
+        return "Тест русских символов: кириллица";
+    }
 }

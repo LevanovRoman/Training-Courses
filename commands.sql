@@ -54,3 +54,9 @@ INSERT INTO training_courses (dept_root_id, appoint_id, training_field_id) VALUE
 SELECT * FROM handbook_position p WHERE p.appoint_name like 'Пожарно-технический минимум' ORDER BY p.appoint_id ASC;
 
 SELECT * FROM persons_cand p WHERE p.d_in = now();
+SELECT * FROM persons_cand p WHERE p.d_in = CURRENT_DATE - INTERVAL '1 day';
+SELECT * FROM persons_cand p WHERE p.d_in = CURRENT_DATE;
+
+SHOW SERVER_ENCODING;
+
+SELECT count(*) FROM training_results;

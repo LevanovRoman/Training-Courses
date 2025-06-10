@@ -1,6 +1,8 @@
 services:
   portal-server:
     container_name: staff_training
+    environment:
+      - TZ=Europe/Moscow
     build:
       dockerfile: Dockerfile
       args:

@@ -13,4 +13,7 @@ public interface PersonsCandRepository extends JpaRepository<PersonsCand, BigDec
 
     @Query(value = "SELECT * FROM persons_cand p WHERE p.d_in = :today", nativeQuery = true)
     List<PersonsCand> findByDateInToday(@Param("today") LocalDate today);
+
+    @Query(value = "SELECT * FROM persons_cand p WHERE p.d_in = CURRENT_DATE - INTERVAL '1 day'", nativeQuery = true)
+    List<PersonsCand> findNewEmployeeByToday();
 }

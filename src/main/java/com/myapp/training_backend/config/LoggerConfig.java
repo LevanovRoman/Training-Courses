@@ -8,6 +8,8 @@ import jakarta.annotation.PostConstruct;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
+import java.nio.charset.StandardCharsets;
+
 @Component
 public class LoggerConfig {
 
@@ -19,6 +21,7 @@ public class LoggerConfig {
         // Настройка encoder
         PatternLayoutEncoder encoder = new PatternLayoutEncoder();
         encoder.setContext(logger.getLoggerContext());
+        encoder.setCharset(StandardCharsets.UTF_8);
         encoder.setPattern("%d{yyyy-MM-dd HH:mm:ss} %-5level - %msg%n");
         encoder.start();
 

@@ -9,6 +9,7 @@ import com.myapp.training_backend.service.DepartmentService;
 import com.myapp.training_backend.service.OneSService;
 import com.myapp.training_backend.service.PositionService;
 import com.myapp.training_backend.service.TrainingCoursesService;
+import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
@@ -19,6 +20,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/courses")
+@RequiredArgsConstructor
 public class TrainingCoursesController {
 
     private static final Logger logger = LoggerFactory.getLogger(TrainingCoursesController.class);
@@ -27,13 +29,6 @@ public class TrainingCoursesController {
     private final PositionService positionService;
     private final TrainingCoursesService trainingCoursesService;
     private final OneSService oneSService;
-
-    public TrainingCoursesController(DepartmentService departmentService, PositionService positionService, TrainingCoursesService trainingCoursesService, OneSService oneSService) {
-        this.departmentService = departmentService;
-        this.positionService = positionService;
-        this.trainingCoursesService = trainingCoursesService;
-        this.oneSService = oneSService;
-    }
 
     @GetMapping("/all-departments")
     public ResponseEntity<List<DepartmentResponseDto>> getAllDepartments(){
